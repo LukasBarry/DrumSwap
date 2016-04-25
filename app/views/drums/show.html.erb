@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel heading">
+    <p><strong><%= @drum.name %></strong></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p><strong>Description:</strong>
+    <%= @drum.description %></p>
+    <br />
+    <p><strong>Price: $<%= @drum.price %></strong></p>
+    <br />
+    <p><strong>Swap Offer:</strong> <%= @drum.swap %></p>
+    <% if @drum.avatar_file_name != nil %>
+      <%= image_tag @drum.avatar.url(:medium), class: "img-responsive" %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_drum_path(@drum), class: "btn btn-info" %> |
+<%= link_to 'Back', drums_path, class: "btn btn-info" %>

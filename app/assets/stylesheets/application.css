@@ -1,0 +1,20 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+.container {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.cant-see-me {
+  display: none;
+}
+
+body {
+  background: url("kit.jpg") no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  margin: 5px;
+}

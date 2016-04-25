@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Available Drums</h1>
+
+<div class="row">
+    <% @drums.each do |drum| %>
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel panel-heading">
+            <h3> <%= link_to drum.name, drum, {:style=>'color:#FFFFFF;', :class => "css_class"} %></h3>
+          </div>
+        <div class="well">
+          <p> <h4><strong> Description:</strong></h4> <%= truncate(drum.description, length: 150, separator: " ") %> <br /> [<%= link_to 'Read More', drum %>] </p>
+          <% if drum.avatar_file_name != nil %>
+            <%= image_tag @drum.avatar.url(:medium), class: "img-responsive" %>
+          <% end %>
+
+          <div class="panel-footer">
+            <% if current_user.id == drum.user.id %>
+              <%= link_to 'Edit', edit_drum_path(drum), class: "btn btn-success" %>
+              <%= link_to 'Destroy', drum, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+<br>
+
+<%= link_to 'New Drum', new_drum_path, class: "btn btn-primary" %>
