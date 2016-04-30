@@ -1,0 +1,26 @@
+<h1><%= @user.username %>'s Profile</h1>
+
+<div class="row">
+  <div class= "col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h5><%= @user.username %></h5>
+        <h5><p><%= @user.experience %></p></h5>
+        <h5><%= @user.style %></h5>
+        <h5>Joined on <%= @user.created_at.strftime("%B %Y") %></h5>
+      </div>
+    </div>
+
+  <div class= "col-md-7">
+      <div class="panel panel-default">
+        <% @user.drums.each do |drum| %>
+        <div class="panel-body">
+          <%= link_to drum.name, drum %> <br />
+        </div>
+             <% end %>
+      </div>
+  </div>
+  </div>
+</div>
+<br />
+<br />
