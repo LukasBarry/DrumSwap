@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   has_many :drums
   acts_as_messageable
+
+  def mailboxer_email(object)
+    email
+  end
 end

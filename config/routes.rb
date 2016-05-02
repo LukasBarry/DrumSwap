@@ -22,6 +22,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :mark_as_read
+    end
+  end
+
   resources :messages, only: [:new, :create]
 
   root 'welcome#index'
