@@ -2,6 +2,8 @@
  *= require_tree .
  *= require_self
  */
+ @import 'chosen';
+ 
 .container {
   background: rgba(255, 255, 255, 0.7);
 }
@@ -17,4 +19,11 @@ body {
 
 .btn {
   margin: 5px;
+}
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
