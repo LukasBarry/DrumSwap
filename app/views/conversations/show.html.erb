@@ -11,10 +11,11 @@
     <div class="messages">
       <% @conversation.receipts_for(current_user).each do |receipt| %>
         <% message = receipt.message %>
-
+        <br />
         <%= message.sender.username %>
-          says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
-        <%= message.body %>
+          says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>:<br />
+          <br />
+        <%= message.body %><br /><br />
       <% end %>
     </div>
   </div>
