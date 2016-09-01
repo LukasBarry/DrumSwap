@@ -1,4 +1,13 @@
-<h1>DrumSwap</h1>
+DrumSwap
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This app was created to give drummers a place to swap their extra pieces. It can be very difficult to sell old drum parts as they are only valuable to certain people. Now those people have somewhere they can exchange or purchase each other's used drums, symbols, and hardware. In-app messaging allows users to chat with each other and barter until an agreement is reached.
+
+To install, fork repository, clone it, then:
+
+run <tt>bundle install</tt>
+
+and then <tt>rake db:migrate</tt>
+
+and you will be able to start your rails server and run the app on your local host. Please feel free to submit any changes or improvements on github, simply create a merge request and I will review.
+
+Thanks!
